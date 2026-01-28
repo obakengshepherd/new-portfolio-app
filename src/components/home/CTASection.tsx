@@ -37,12 +37,15 @@ export function CTASection() {
               <span className="bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 Amazing Together?
               </span>
+              <br />
+              <p className="mt-4 text-lg md:text-xl font-medium text-muted-foreground">
+                I'm always interested in hearing about new projects and
+                opportunities.
+              </p>
+              <p className="mt-2 text-lg md:text-xl font-medium text-muted-foreground">
+                Let’s discuss how I can help bring your vision to life.
+              </p>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              I'm always interested in hearing about new projects and
-              opportunities. Let's discuss how I can help bring your vision to
-              life.
-            </p>
           </motion.div>
 
           {/* CTA Buttons */}

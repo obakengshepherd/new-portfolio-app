@@ -27,8 +27,13 @@ export const navigationItems: NavigationItem[] = [
     order: 4,
   },
   {
+    label: "Blog",
+    href: "/blog",
+    order: 5,
+  },
+  {
     label: "Contact",
     href: "/contact",
-    order: 5,
+    order: 6,
   },
 ];

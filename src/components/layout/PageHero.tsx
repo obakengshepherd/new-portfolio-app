@@ -78,11 +78,6 @@ export function PageHero({
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight bg-linear-to-br from-foreground to-muted-foreground bg-clip-text text-transparent mb-4">
               {title}
             </h1>
-            {description && (
-              <p className="text-lg text-muted-foreground max-w-2xl">
-                {description}
-              </p>
-            )}
           </motion.div>
 
           {showSocial && (

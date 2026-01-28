@@ -44,7 +44,16 @@ export function Header() {
                 href="/"
                 className="font-bold text-xl md:text-2xl text-primary hover:text-primary-hover transition-colors duration-300 hover:scale-105"
               >
-                Portfolio
+                <span
+                  className="bg-linear-to-r from-primary via-accent to-primary
+                   bg-clip-text text-transparent
+                   font-extrabold tracking-tight
+                   text-lg sm:text-xl md:text-2xl lg:text-3xl
+                   whitespace-nowrap
+                   "
+                >
+                  OBAKENG TSAAGANE
+                </span>
               </Link>
             </motion.div>
 

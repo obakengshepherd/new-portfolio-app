@@ -90,9 +90,11 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
             >
-              I build scalable, high-performance web applications with beautiful
-              user experiences. Specializing in React, Next.js, TypeScript, and
-              modern web technologies.
+              Backend & Full-Stack Engineer
+              <br />
+              Data Automation & AI Systems Builder
+              <br />
+              Freelancer & Contractor
             </motion.p>
 
             {/* CTA Buttons */}
@@ -109,13 +111,17 @@ export function HeroSection() {
                   View My Work
                 </Button>
               </Link>
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link
+                href="/cv/OBAKENG SHEPHERD TSAAGANE - Resume.pdf"
+                download
+                className="w-full sm:w-auto"
+              >
                 <Button
                   size="lg"
                   variant="outline"
                   className="w-full sm:w-auto"
                 >
-                  Get In Touch
+                  Download CV
                 </Button>
               </Link>
             </motion.div>
@@ -127,23 +133,7 @@ export function HeroSection() {
             >
               <div className="space-y-2">
                 <p className="text-3xl md:text-4xl font-extrabold text-primary">
-                  50+
-                </p>
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
-                  Projects Completed
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="text-3xl md:text-4xl font-extrabold text-accent">
-                  100K+
-                </p>
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
-                  Users Reached
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="text-3xl md:text-4xl font-extrabold text-primary">
-                  8+
+                  3+
                 </p>
                 <p className="text-sm md:text-base text-muted-foreground font-medium">
                   Years Experience
@@ -159,7 +149,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
-            <ProfileImage size="xl" />
+            <ProfileImage size="2xl" />
           </motion.div>
         </div>
       </div>

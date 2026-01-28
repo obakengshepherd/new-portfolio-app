@@ -13,11 +13,7 @@ export function FeaturedProjects() {
 
   return (
     <Section className="bg-linear-to-b from-background to-muted/20 py-20">
-      <SectionHeading
-        title="Featured Projects"
-        subtitle="Portfolio"
-        description="A selection of recent projects showcasing my skills and experience"
-      />
+      <SectionHeading title="Featured Projects" subtitle="Portfolio" />
 
       <motion.div
         initial="hidden"

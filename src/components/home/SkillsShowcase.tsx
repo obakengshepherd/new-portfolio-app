@@ -15,11 +15,7 @@ export function SkillsShowcase() {
 
   return (
     <Section className="py-20 bg-linear-to-b from-background via-background to-muted/15">
-      <SectionHeading
-        title="Technical Skills"
-        subtitle="Expertise"
-        description="Technologies and tools I specialize in"
-      />
+      <SectionHeading title="Technical Skills" subtitle="Expertise" />
 
       <motion.div
         initial="hidden"

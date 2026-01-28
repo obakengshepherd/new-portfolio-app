@@ -13,16 +13,15 @@ export function CVDownload() {
           <Download size={24} className="text-primary" />
         </div>
         <div className="flex-1">
-          <h3 className="font-bold text-foreground mb-1">Download My CV</h3>
+          <h3 className="font-bold text-foreground mb-1">Download CV</h3>
           <p className="text-sm text-muted-foreground mb-4">
-            Get a comprehensive look at my experience and qualifications
+            A comprehensive look at my experience and qualifications
           </p>
           <a
-            href={contactInfo.cvUrl}
+            href="/cv/OBAKENG SHEPHERD TSAAGANE - Resume.pdf"
             download
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-background hover:bg-primary-hover transition-colors"
+            className="w-full sm:w-auto"
           >
-            <Download size={16} />
             Download CV
           </a>
         </div>

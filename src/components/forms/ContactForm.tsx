@@ -241,7 +241,7 @@ export function ContactForm() {
         variants={itemVariants}
         className="text-sm text-muted-foreground text-center"
       >
-        I'll respond to your message within 24 hours.
+        I'll respond to your message within 48 hours.
       </motion.p>
     </motion.form>
   );

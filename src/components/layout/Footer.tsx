@@ -13,8 +13,14 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4 text-primary">Portfolio</h3>
             <p className="text-muted-foreground text-sm">
-              Full-stack engineer passionate about building excellent digital
-              experiences.
+              Full-stack engineer who builds excellent digital experiences.
+            </p>
+            <br />
+            <p className="text-muted-foreground text-sm">
+              I am open to opportunities and collaborations that will have me
+              working with and using any appropriate tool or technology within
+              my scope of knowledge and skillset in my utility belt, to deliver
+              the best results and get the job done effectively.
             </p>
           </div>
 
@@ -38,6 +44,11 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Connect</h4>
             <SocialLinks />
+            <p className="text-muted-foreground text-sm mt-2">
+              <span className="block">obakengtsaagane@gmail.com</span>
+              <span className="block">067 630 8354</span>
+              <span className="block">Pretoria, Gauteng | South Africa</span>
+            </p>
           </div>
         </div>
 

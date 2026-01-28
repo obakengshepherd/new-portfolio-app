@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { SkillsShowcase } from "@/components/home/SkillsShowcase";
-import { Testimonials } from "@/components/home/Testimonials";
 import { CTASection } from "@/components/home/CTASection";
 import { Metadata } from "next";
 
@@ -19,7 +18,6 @@ export default function Home() {
       <AboutSection />
       <FeaturedProjects />
       <SkillsShowcase />
-      <Testimonials />
       <CTASection />
     </>
   );

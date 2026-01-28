@@ -21,42 +21,61 @@ export interface AboutContent {
 
 export const aboutContent: AboutContent = {
   intro:
-    "Full-Stack Engineer | Product-Focused Developer | Open Source Enthusiast",
+    "Backend & Full-Stack Engineer | Data, Automation & AI Systems Builder | Freelancer & Contractor",
   summary:
-    "I am a passionate full-stack engineer with 8+ years of experience building scalable, user-centric applications. My expertise spans modern frontend frameworks, backend systems, and cloud infrastructure. I thrive on solving complex technical challenges while maintaining code quality and developer experience.",
+    "I design and build secure, scalable backend systems, data platforms, and automation tools. As well as modern web applications that help businesses move faster, make smarter decisions, and grow with confidence.",
+
   vision:
-    "To create technology that empowers teams and enhances human capabilities. I believe in building products that are not just functional, but delightful to use and maintain.",
+    "To create intelligent, reliable systems and digital products that turn complex business challenges into elegant, high-performing solutions, empowering organizations, teams, and entrepreneurs to operate at their best.",
+
   approach:
-    "I approach every project with a focus on clean architecture, scalability, and user-centered design. I value continuous learning, collaboration, and shipping quality products early and often.",
+    "I work at the intersection of backend engineering, data systems, automation, and product-focused web development. I focus on clean architecture, security, performance, and long-term maintainability, delivering production-ready systems and applications that scale, integrate seamlessly, and evolve with business needs.",
+
   highlights: [
-    "Built and shipped 5+ production applications reaching 50K+ users",
-    "Led engineering teams and mentored 10+ junior developers",
-    "Expert in React, TypeScript, and modern full-stack development",
-    "Passionate about open source and community contribution",
-    "Strong advocate for accessibility and inclusive design",
-    "Experienced in cloud infrastructure (AWS, GCP)",
+    "Built and deployed full-stack and backend systems for real-world business and client environments",
+    "Specialist in databases, APIs, data pipelines, automation, and system optimization",
+    "Strong focus on fintech, analytics, compliance, and operational platforms",
+    "Experienced with .NET, Node.js, Python, SQL, JAMstack, and cloud-native architectures",
+    "Delivered production-ready systems with CI/CD, security, monitoring, and payment integrations",
+    "Built custom WordPress systems with PHP, admin-friendly CMS workflows, and performance optimization",
+    "Experienced with low-code and no-code solutions for rapid delivery and business automation",
+    "Combines deep engineering expertise with product thinking and client-focused execution",
   ],
+
   certifications: [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      url: "https://aws.amazon.com/certification/",
+      name: "Certificate in Full-Stack Development",
+      issuer: "FND App Academy",
+      date: "2025",
     },
     {
-      name: "Google Cloud Associate Cloud Engineer",
-      issuer: "Google Cloud",
-      date: "2022",
-      url: "https://cloud.google.com/certification",
+      name: "Introduction To Freelancing",
+      issuer: "Mzansi Digital Learning",
+      date: "2025",
+    },
+    {
+      name: "GitHub Labs",
+      issuer: "Belgium Campus IT Versity",
+      date: "2025",
+    },
+    {
+      name: "A Glimpse into ERP",
+      issuer: "Belgium Campus IT Versity",
+      date: "2025",
+    },
+    {
+      name: "Agentic Automation",
+      issuer: "Belgium Campus IT Versity",
+      date: "2025",
     },
   ],
   education: [
     {
-      degree: "Bachelor of Science",
-      field: "Computer Science",
-      institution: "University of Technology",
-      graduationYear: 2016,
-      details: "GPA: 3.8/4.0 | Honors: Cum Laude",
+      degree: "Diploma in Information Technology",
+      field: "Information Technology",
+      institution: "Belgium Campus IT Versity",
+      graduationYear: 2027,
+      details: "Weighted Average: 70.5%",
     },
   ],
 };
