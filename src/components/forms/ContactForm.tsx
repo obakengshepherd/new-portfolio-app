@@ -254,7 +254,8 @@ export function ContactForm() {
         />
         {formData.subject && (
           <p className="text-xs text-muted-foreground mt-1">
-            {formData.subject.length} character{formData.subject.length !== 1 ? "s" : ""}
+            {formData.subject.length} character
+            {formData.subject.length !== 1 ? "s" : ""}
           </p>
         )}
       </motion.div>
@@ -290,7 +291,8 @@ export function ContactForm() {
           <p className="text-error text-xs mt-1">{getFieldError("message")}</p>
         )}
         <p className="text-xs text-muted-foreground mt-1">
-          {formData.message.length} character{formData.message.length !== 1 ? "s" : ""}
+          {formData.message.length} character
+          {formData.message.length !== 1 ? "s" : ""}
         </p>
       </motion.div>
 

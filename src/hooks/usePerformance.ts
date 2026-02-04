@@ -19,7 +19,10 @@ export function usePerformanceMonitoring() {
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             const fidEntry = entry as any;
-            console.log("FID:", fidEntry.processingDuration || fidEntry.duration);
+            console.log(
+              "FID:",
+              fidEntry.processingDuration || fidEntry.duration,
+            );
           }
         });
         fidObserver.observe({ entryTypes: ["first-input"] });
@@ -48,7 +51,10 @@ export function usePerformanceMonitoring() {
   }, []);
 }
 
-export function useIdleCallback(callback: () => void, options?: IdleRequestOptions) {
+export function useIdleCallback(
+  callback: () => void,
+  options?: IdleRequestOptions,
+) {
   useEffect(() => {
     if ("requestIdleCallback" in window) {
       const id = requestIdleCallback(callback, options);
@@ -69,16 +75,19 @@ export function useLazyLoad(
     const element = elementRef.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        callback();
-        observer.unobserve(element);
-      }
-    }, {
-      threshold: 0.1,
-      rootMargin: "50px",
-      ...options,
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          callback();
+          observer.unobserve(element);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "50px",
+        ...options,
+      },
+    );
 
     observer.observe(element);
 
