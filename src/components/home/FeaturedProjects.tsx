@@ -84,7 +84,7 @@ export function FeaturedProjects() {
                 {/* Hover CTA */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-background via-background/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <span className="text-sm font-semibold text-primary flex items-center gap-2">
-                    View Project
+                    View Case Study
                     <svg
                       className="w-4 h-4"
                       fill="none"
@@ -116,7 +116,7 @@ export function FeaturedProjects() {
       >
         <Link href="/projects" className="inline-block">
           <Button variant="outline" size="lg" className="px-8">
-            View All Projects
+            Explore Full Portfolio
             <svg
               className="w-4 h-4 ml-2"
               fill="none"

@@ -20,13 +20,14 @@ export function AboutSection() {
           <div>
             <SectionHeading
               title="About Me"
-              subtitle="Introduction"
+              subtitle="Who I Am & How I Work"
               className="md:text-left"
             />
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {aboutContent.summary}
           </p>
+          <br />
           <p className="text-base text-muted-foreground leading-relaxed">
             {aboutContent.approach}
           </p>

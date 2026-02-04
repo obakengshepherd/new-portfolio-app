@@ -116,7 +116,9 @@ export function SkillsShowcase() {
 
                     {/* Hover Arrow */}
                     <div className="pt-2 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-sm font-semibold">Learn more</span>
+                      <span className="text-sm font-semibold">
+                        Explore use cases
+                      </span>
                       <svg
                         className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300"
                         fill="none"

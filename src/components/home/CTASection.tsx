@@ -32,15 +32,19 @@ export function CTASection() {
             className="space-y-4"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              Ready to Create Something
+              Ready to Build Something Amazing
               <br />
               <span className="bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                Amazing Together?
+                That Actually Works?
               </span>
               <br />
               <p className="mt-4 text-lg md:text-xl font-medium text-muted-foreground">
                 I'm always interested in hearing about new projects and
                 opportunities.
+              </p>
+              <p className="mt-4 text-lg md:text-xl font-medium text-muted-foreground">
+                Whether you need an MVP, internal system, automation, or a full
+                product. I ship fast, reliably, and with business impact.
               </p>
               <p className="mt-2 text-lg md:text-xl font-medium text-muted-foreground">
                 Let’s discuss how I can help bring your vision to life.
@@ -84,7 +88,7 @@ export function CTASection() {
                 variant="outline"
                 className="w-full sm:w-auto px-8"
               >
-                View Portfolio
+                See Proof of Work
               </Button>
             </Link>
           </motion.div>

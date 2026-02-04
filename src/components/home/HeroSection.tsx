@@ -69,7 +69,7 @@ export function HeroSection() {
             {/* Subtitle/Badge */}
             <motion.div variants={itemVariants} className="flex justify-start">
               <span className="px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm tracking-wider uppercase">
-                Welcome to my portfolio
+                Welcome, I Am Your Go-To Technical Partner
               </span>
             </motion.div>
 
@@ -81,7 +81,7 @@ export function HeroSection() {
               Full-Stack Engineer
               <br />
               <span className="bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                & Creative Developer
+                & Rapid MVP Builder
               </span>
             </motion.h1>
 
@@ -90,11 +90,10 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
             >
-              Backend & Full-Stack Engineer
-              <br />
-              Data Automation & AI Systems Builder
-              <br />
-              Freelancer & Contractor
+              Backend • Full-Stack • Fintech • Data • Automation • AI
+              <br />I break down problems, choose the right tools, integrate
+              solutions, and ship working products, fast, reliably, and at
+              scale.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -133,10 +132,10 @@ export function HeroSection() {
             >
               <div className="space-y-2">
                 <p className="text-3xl md:text-4xl font-extrabold text-primary">
-                  3+
+                  2+ Years
                 </p>
                 <p className="text-sm md:text-base text-muted-foreground font-medium">
-                  Years Experience
+                  Building & Shipping Production Systems
                 </p>
               </div>
             </motion.div>

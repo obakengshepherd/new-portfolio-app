@@ -16,8 +16,8 @@ export default function Home() {
     <>
       <HeroSection />
       <AboutSection />
-      <FeaturedProjects />
       <SkillsShowcase />
+      <FeaturedProjects />
       <CTASection />
     </>
   );

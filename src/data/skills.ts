@@ -278,31 +278,12 @@ export const skills: Skill[] = [
     featured: false,
     order: 14,
   },
-  {
-    id: "skill-15",
-    name: "Cloud Infrastructure (AWS)",
-    slug: "aws",
-    category: "devops",
-    subcategory: "Cloud",
-    proficiency: 5,
-    proficiencyLabel: "advanced",
-    yearsOfExperience: 3,
-    description: "Cloud-hosted, scalable production systems",
-    detailedDescription:
-      "Experience deploying and managing backend systems, APIs, and databases on AWS with a focus on security, reliability, and scalability.",
-    icon: "Cloud",
-    color: "#FF9900",
-    relatedProjects: ["project-7"],
-    relatedSkills: ["skill-13", "skill-14"],
-    featured: false,
-    order: 15,
-  },
 
   // ======================
   // AI & AUTOMATION
   // ======================
   {
-    id: "skill-16",
+    id: "skill-15",
     name: "AI Integrations (OpenAI)",
     slug: "ai-integrations",
     category: "tools",
@@ -318,14 +299,14 @@ export const skills: Skill[] = [
     relatedProjects: ["project-8"],
     relatedSkills: ["skill-7", "skill-11"],
     featured: true,
-    order: 16,
+    order: 15,
   },
 
   // ======================
   // TOOLS & WORKFLOW
   // ======================
   {
-    id: "skill-17",
+    id: "skill-16",
     name: "Git & GitHub",
     slug: "git",
     category: "tools",
@@ -341,10 +322,10 @@ export const skills: Skill[] = [
     relatedProjects: ["project-1", "project-2", "project-3"],
     relatedSkills: [],
     featured: false,
-    order: 17,
+    order: 16,
   },
   {
-    id: "skill-18",
+    id: "skill-17",
     name: "Power BI & Reporting Tools",
     slug: "powerbi",
     category: "tools",
@@ -360,14 +341,14 @@ export const skills: Skill[] = [
     relatedProjects: ["project-6"],
     relatedSkills: ["skill-12"],
     featured: true,
-    order: 18,
+    order: 17,
   },
 
   // ======================
   // SOFT SKILLS
   // ======================
   {
-    id: "skill-19",
+    id: "skill-18",
     name: "Communication",
     slug: "communication",
     category: "soft-skills",
@@ -383,10 +364,10 @@ export const skills: Skill[] = [
     relatedProjects: [],
     relatedSkills: [],
     featured: false,
-    order: 19,
+    order: 18,
   },
   {
-    id: "skill-20",
+    id: "skill-19",
     name: "Problem Solving & Systems Thinking",
     slug: "problem-solving",
     category: "soft-skills",
@@ -402,10 +383,10 @@ export const skills: Skill[] = [
     relatedProjects: [],
     relatedSkills: [],
     featured: true,
-    order: 20,
+    order: 19,
   },
   {
-    id: "skill-21",
+    id: "skill-20",
     name: "Client Communication & Delivery",
     slug: "client-delivery",
     category: "soft-skills",
@@ -421,10 +402,10 @@ export const skills: Skill[] = [
     relatedProjects: [],
     relatedSkills: [],
     featured: true,
-    order: 21,
+    order: 20,
   },
   {
-    id: "skill-22",
+    id: "skill-21",
     name: "Leadership & Mentorship",
     slug: "leadership",
     category: "soft-skills",
@@ -440,6 +421,6 @@ export const skills: Skill[] = [
     relatedProjects: [],
     relatedSkills: [],
     featured: false,
-    order: 22,
+    order: 21,
   },
 ];

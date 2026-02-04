@@ -6,11 +6,15 @@ export type ProjectStatus =
   | "archived"
   | "concept";
 export type ProjectCategory =
-  | "web"
-  | "mobile"
-  | "design"
+  | "fintech"
+  | "backend"
+  | "data"
+  | "security"
   | "fullstack"
-  | "open-source";
+  | "platform"
+  | "infrastructure"
+  | "ai"
+  | "compliance";
 
 export interface ProjectChallenge {
   title: string;

@@ -44,14 +44,7 @@ export function Header() {
                 href="/"
                 className="font-bold text-xl md:text-2xl text-primary hover:text-primary-hover transition-colors duration-300 hover:scale-105"
               >
-                <span
-                  className="bg-linear-to-r from-primary via-accent to-primary
-                   bg-clip-text text-transparent
-                   font-extrabold tracking-tight
-                   text-lg sm:text-xl md:text-2xl lg:text-3xl
-                   whitespace-nowrap
-                   "
-                >
+                <span className="bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-transparent text-[1.05em]">
                   OBAKENG TSAAGANE
                 </span>
               </Link>
