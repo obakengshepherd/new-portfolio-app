@@ -85,13 +85,6 @@ export default function ContactPage() {
             </Card>
 
             <CVDownload />
-
-            <Card>
-              <h3 className="font-bold text-foreground mb-4">
-                Connect With Me
-              </h3>
-              <SocialLinks className="flex-col" />
-            </Card>
           </div>
 
           {/* Contact Form */}

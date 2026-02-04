@@ -160,8 +160,23 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground transition-colors duration-300;
+    /* Enable GPU acceleration for smooth scrolling */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Improve scroll performance */
+  section {
+    will-change: auto;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 }
 

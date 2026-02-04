@@ -143,18 +143,31 @@ export function Header() {
                       key={item.href}
                       whileHover={{ x: 4 }}
                       whileTap={{ scale: 0.95 }}
+                      className="relative"
                     >
                       <Link
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={cn(
-                          "block px-3 py-2 rounded-md text-sm font-medium transition-all duration-200",
+                          "block px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 relative",
                           isActive
-                            ? "bg-primary text-background shadow-md"
-                            : "text-foreground hover:bg-muted",
+                            ? "text-primary"
+                            : "text-foreground hover:text-primary",
                         )}
                       >
                         {item.label}
+                        {/* Underline for active item */}
+                        {isActive && (
+                          <motion.span
+                            layoutId="mobile-nav-underline"
+                            className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
+                            transition={{
+                              type: "spring",
+                              stiffness: 500,
+                              damping: 30,
+                            }}
+                          />
+                        )}
                       </Link>
                     </motion.div>
                   );

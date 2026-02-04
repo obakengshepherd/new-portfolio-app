@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/cn";
 import Image from "next/image";
 import { useState } from "react";
+import { useImagePreload } from "@/hooks/usePreload";
 
 interface ProfileImageProps {
   size?: "sm" | "md" | "lg" | "xl" | "2xl";
@@ -25,6 +26,7 @@ export function ProfileImage({
   animated = true,
 }: ProfileImageProps) {
   const [imageError, setImageError] = useState(false);
+  const isImageLoaded = useImagePreload("/images/pro pic.jpeg");
 
   const content = (
     <div
@@ -34,6 +36,11 @@ export function ProfileImage({
         className,
       )}
     >
+      {/* Skeleton Loader while image preloads */}
+      {!isImageLoaded && !imageError && (
+        <div className="absolute inset-0 bg-linear-to-r from-muted via-muted/50 to-muted animate-content-shimmer" />
+      )}
+
       {/* Real Image */}
       {!imageError && (
         <Image
@@ -41,7 +48,10 @@ export function ProfileImage({
           alt="Obakeng Tsaagane"
           fill
           priority
-          className="object-cover"
+          className={cn(
+            "object-cover transition-opacity duration-300",
+            isImageLoaded ? "opacity-100" : "opacity-0",
+          )}
           onError={() => setImageError(true)}
         />
       )}

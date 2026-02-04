@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-tailwindcss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "custom-variant",
+          "theme",
+          "apply",
+          "tailwind",
+          "import"
+        ]
+      }
+    ],
+    "function-no-unknown": null,
+    "declaration-block-no-redundant-longhand-properties": null
+  }
+}

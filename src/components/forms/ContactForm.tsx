@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/common/Button";
-import { Mail, CheckCircle, AlertCircle } from "lucide-react";
+import { CheckCircle, AlertCircle } from "lucide-react";
 
 interface ContactFormState {
   name: string;
@@ -21,6 +21,11 @@ export function ContactForm() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [focusedField, setFocusedField] = useState<string | null>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -30,6 +35,53 @@ export function ContactForm() {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const handleFocus = (fieldName: string) => {
+    setFocusedField(fieldName);
+  };
+
+  const handleBlur = () => {
+    setFocusedField(null);
+  };
+
+  const focusField = (fieldName: string) => {
+    switch (fieldName) {
+      case "name":
+        nameRef.current?.focus();
+        break;
+      case "email":
+        emailRef.current?.focus();
+        break;
+      case "subject":
+        subjectRef.current?.focus();
+        break;
+      case "message":
+        messageRef.current?.focus();
+        break;
+    }
+  };
+
+  const getFieldError = (fieldName: string): string | null => {
+    switch (fieldName) {
+      case "email":
+        if (formData.email && !formData.email.includes("@")) {
+          return "Please enter a valid email address";
+        }
+        return null;
+      case "name":
+        if (formData.name && formData.name.trim().length < 2) {
+          return "Name must be at least 2 characters";
+        }
+        return null;
+      case "message":
+        if (formData.message && formData.message.trim().length < 10) {
+          return "Message must be at least 10 characters";
+        }
+        return null;
+      default:
+        return null;
+    }
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -113,42 +165,64 @@ export function ContactForm() {
         <motion.div variants={itemVariants}>
           <label
             htmlFor="name"
-            className="block text-sm font-semibold text-foreground mb-2"
+            className="block text-sm font-semibold text-foreground mb-2 cursor-pointer hover:text-primary transition-colors"
           >
             Name <span className="text-error">*</span>
           </label>
           <input
+            ref={nameRef}
             id="name"
             name="name"
             type="text"
             value={formData.name}
             onChange={handleChange}
+            onFocus={() => handleFocus("name")}
+            onBlur={handleBlur}
             placeholder="Your name"
             required
             disabled={isLoading}
-            className="w-full px-4 py-2 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            aria-label="Your name"
+            aria-required="true"
+            aria-invalid={getFieldError("name") ? "true" : "false"}
+            className={`w-full px-4 py-3 rounded-lg bg-input border-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background focus:shadow-lg hover:bg-background/50 hover:border-primary/40 cursor-text disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 ${
+              focusedField === "name" ? "border-primary" : "border-border"
+            } ${getFieldError("name") ? "border-error" : ""}`}
           />
+          {getFieldError("name") && focusedField === "name" && (
+            <p className="text-error text-xs mt-1">{getFieldError("name")}</p>
+          )}
         </motion.div>
 
         {/* Email Field */}
         <motion.div variants={itemVariants}>
           <label
             htmlFor="email"
-            className="block text-sm font-semibold text-foreground mb-2"
+            className="block text-sm font-semibold text-foreground mb-2 cursor-pointer hover:text-primary transition-colors"
           >
             Email <span className="text-error">*</span>
           </label>
           <input
+            ref={emailRef}
             id="email"
             name="email"
             type="email"
             value={formData.email}
             onChange={handleChange}
+            onFocus={() => handleFocus("email")}
+            onBlur={handleBlur}
             placeholder="your.email@example.com"
             required
             disabled={isLoading}
-            className="w-full px-4 py-2 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            aria-label="Your email address"
+            aria-required="true"
+            aria-invalid={getFieldError("email") ? "true" : "false"}
+            className={`w-full px-4 py-3 rounded-lg bg-input border-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background focus:shadow-lg hover:bg-background/50 hover:border-primary/40 cursor-text disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 ${
+              focusedField === "email" ? "border-primary" : "border-border"
+            } ${getFieldError("email") ? "border-error" : ""}`}
           />
+          {getFieldError("email") && focusedField === "email" && (
+            <p className="text-error text-xs mt-1">{getFieldError("email")}</p>
+          )}
         </motion.div>
       </div>
 
@@ -156,42 +230,68 @@ export function ContactForm() {
       <motion.div variants={itemVariants}>
         <label
           htmlFor="subject"
-          className="block text-sm font-semibold text-foreground mb-2"
+          className="block text-sm font-semibold text-foreground mb-2 cursor-pointer hover:text-primary transition-colors"
         >
           Subject <span className="text-error">*</span>
         </label>
         <input
+          ref={subjectRef}
           id="subject"
           name="subject"
           type="text"
           value={formData.subject}
           onChange={handleChange}
+          onFocus={() => handleFocus("subject")}
+          onBlur={handleBlur}
           placeholder="What's this about?"
           required
           disabled={isLoading}
-          className="w-full px-4 py-2 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+          aria-label="Message subject"
+          aria-required="true"
+          className={`w-full px-4 py-3 rounded-lg bg-input border-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background focus:shadow-lg hover:bg-background/50 hover:border-primary/40 cursor-text disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 ${
+            focusedField === "subject" ? "border-primary" : "border-border"
+          }`}
         />
+        {formData.subject && (
+          <p className="text-xs text-muted-foreground mt-1">
+            {formData.subject.length} character{formData.subject.length !== 1 ? "s" : ""}
+          </p>
+        )}
       </motion.div>
 
       {/* Message Field */}
       <motion.div variants={itemVariants}>
         <label
           htmlFor="message"
-          className="block text-sm font-semibold text-foreground mb-2"
+          className="block text-sm font-semibold text-foreground mb-2 cursor-pointer hover:text-primary transition-colors"
         >
           Message <span className="text-error">*</span>
         </label>
         <textarea
+          ref={messageRef}
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
+          onFocus={() => handleFocus("message")}
+          onBlur={handleBlur}
           placeholder="Your message here..."
           required
           disabled={isLoading}
           rows={6}
-          className="w-full px-4 py-2 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 resize-none"
+          aria-label="Your message"
+          aria-required="true"
+          aria-invalid={getFieldError("message") ? "true" : "false"}
+          className={`w-full px-4 py-3 rounded-lg bg-input border-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background focus:shadow-lg hover:bg-background/50 hover:border-primary/40 cursor-text disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 resize-none ${
+            focusedField === "message" ? "border-primary" : "border-border"
+          } ${getFieldError("message") ? "border-error" : ""}`}
         />
+        {getFieldError("message") && focusedField === "message" && (
+          <p className="text-error text-xs mt-1">{getFieldError("message")}</p>
+        )}
+        <p className="text-xs text-muted-foreground mt-1">
+          {formData.message.length} character{formData.message.length !== 1 ? "s" : ""}
+        </p>
       </motion.div>
 
       {/* Status Messages */}
@@ -230,9 +330,8 @@ export function ContactForm() {
           size="lg"
           variant="primary"
           disabled={isLoading}
-          className="w-full flex items-center justify-center gap-2"
+          className="w-full"
         >
-          <Mail size={18} />
           {isLoading ? "Sending..." : "Send Message"}
         </Button>
       </motion.div>
