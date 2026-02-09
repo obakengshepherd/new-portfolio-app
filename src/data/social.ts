@@ -4,7 +4,7 @@ export const socialLinks: Social[] = [
   {
     id: "github",
     platform: "github",
-    url: "https://github.com",
+    url: "https://github.com/obakengshepherd",
     label: "GitHub",
     icon: "Github",
     order: 1,
@@ -12,7 +12,7 @@ export const socialLinks: Social[] = [
   {
     id: "linkedin",
     platform: "linkedin",
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/obakeng-tsaagane-307544244/",
     label: "LinkedIn",
     icon: "Linkedin",
     order: 2,
@@ -20,7 +20,7 @@ export const socialLinks: Social[] = [
   {
     id: "twitter",
     platform: "twitter",
-    url: "https://twitter.com",
+    url: "https://x.com/obakengtsaagane",
     label: "Twitter",
     icon: "Twitter",
     order: 3,
