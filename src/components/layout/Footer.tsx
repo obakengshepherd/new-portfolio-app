@@ -55,7 +55,7 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-border pt-8">
           <p className="text-center text-muted-foreground text-sm">
-            © {currentYear} Tsaagane Obakeng. All rights reserved.
+            © 2025 Tsaagane Obakeng. All rights reserved.
           </p>
         </div>
       </div>
